@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+ <html>
+   <head>
+        <meta charset="UTF-8">
+        <title>Amo Digital Services</title> 
+
+        <link rel="stylesheet" href="style.css">
+
+   </head>
+
+     <body>  
+
+    <div class="header">
+        <h1>Welcome to Amo Digital Services</h1>
+      <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact-us.html">Contact-Us</a></li>
+            <li><a href="examples.html">Samples</a></li>
+        </ul>
+
+      </nav>
+ 
+    </div> 
+
+       <section id="gallery" class="container">
+        <h2 class="section-title">Samples</h2>
+        <p style="text-align: center;">Explore our gallery to see our work samples.</p>
+
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <img src="images/logo-1.jpeg" alt="logo">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="images/logo-2.jpeg" alt="logo">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="images/menu-1.jpeg" alt="menu">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="images/menu-2.jpeg" alt="menu">
+            </div> 
+
+                        <div class="mySlides fade">
+                <img src="images/brochure-1.jpeg" alt="brochure">
+            </div>
+
+                        <div class="mySlides fade">
+                <img src="images/brochure-2.jpeg" alt="brochure">
+            </div>
+
+                        <div class="mySlides fade">
+                <img src="images/cv-1.jpeg" alt="cv">
+            </div>
+
+                        <div class="mySlides fade">
+                <img src="images/cv-2.jpeg" alt="cv">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <div class="dot-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+            <span class="dot" onclick="currentSlide(8)"></span>
+
+        </div>
+
+        <div class="gallery-grid" style="display: none;">
+             <div class="gallery-item">
+                <img src="images/logo-1.jpeg" alt="logo">
+            </div>
+            <div class="gallery-item">
+                <img src="images/logo-2.jpeg" alt="logo">
+            </div>
+            <div class="gallery-item">
+                <img src="images/menu-1.jpeg" alt="menu">
+            </div>
+            <div class="gallery-item">
+                <img src="images/menu-2.jpeg" alt="menu">
+            </div> 
+
+            <div class="gallery-item">
+                <img src="images/brochure-1.jpeg" alt="brochure">
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/brochure-2.jpeg" alt="brochure">
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/cv-1.jpeg" alt="cv">
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/cv-2.jpeg" alt="cv">
+            </div>
+
+        </div>
+
+    </section>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+        }
+    </script>
+
+      <footer>
+        <p>&copy; 2023 Amo Digital Services. All rights reserved.</p>
+        </footer>
+
+
+     </body>
+
+ </html>
