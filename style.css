@@ -2,7 +2,7 @@
     text-align: center;
     top:0;
     height:100px;
-    background-color: #e40d0d;
+    background-color: #076becf5;
     width: 100%;
     position: fixed;
 
@@ -26,7 +26,7 @@
             max-width: 1200px;
             margin: 40px auto;
             padding: 20px;
-            background-color: #a75454;
+            background-color: #076becf5;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
             border-radius: 10px;
         }
@@ -34,7 +34,7 @@
                .section-title {
             text-align: center;
             font-size: 2em;
-            color: #0056b3;
+            color: #0e0e0f;
             margin-bottom: 30px;
             border-bottom: 2px solid #eee;
             padding-bottom: 10px;
